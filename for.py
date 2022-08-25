@@ -175,10 +175,10 @@ U V W X Y
 * * * * *
 """
 
-for i in range(1,6):
-    for j in range(1,i+1):
-        print("*",end=" ")
-    print()
+# for i in range(1,6):
+#     for j in range(1,i+1):
+#         print("*",end=" ")
+#     print()
 
 """
 * * * * *
@@ -193,3 +193,105 @@ for i in range(1,6):
       * *
         *  
 """
+
+# for i in range(6):
+#     for j in range(6):
+#         if j <= i :
+#             print(" ",end=" ")
+#         else:
+#             print("*",end=" ")
+#     print()
+
+# for i in range(6):
+#     for j in range(i+1):
+#         print(" ",end=" ")
+#     for k in range(i+1,6):
+#         print("*",end=" ")
+#     print()    
+
+"""
+1 0 1 0 1 
+  0 1 0 1
+    1 0 1
+      0 1 
+        1
+"""
+"""
+for..else
+"""
+
+# for i in range(4):
+#   print(i,end=" ")
+# else:
+#   print("Loop is Over")
+
+# print()
+
+# for i in range(10):
+#   if i == 5:
+#     break
+#   print(i,end=" ")
+# else:
+#   print("Loop is Over")
+
+# myStr = "Hello, world!"
+
+# for i in myStr:
+#   print(i)
+
+# print()
+
+# list1 = ["Hello",1,25.58,2+5j]
+
+# print(list1)
+
+# for i in list1:
+#   print(type(i))
+#   print(i)
+
+
+# l = []
+
+# for i in range(5):
+#   l.append(int(input("Enter element: ")))
+
+# print(l)
+
+"""
+e.g. input_str = "Hello World! Good Evening how are you?"
+
+characters - e , h , y
+
+Output:
+
+World! Good
+
+"""
+input_str = input("Enter the String: ")
+
+ch = []
+
+for i in range(3):
+  ch.append(input("Enter character: "))
+
+words = input_str.split(" ")
+
+# print(words)
+
+new_words = []
+
+for i in words:
+  for j in i:
+    if j in ch:
+      new_words.append(i)
+      break
+
+# print(new_words)
+new_str = []
+
+for i in words:
+  if i not in new_words:
+    new_str.append(i)
+
+
+print(" ".join(new_str))
